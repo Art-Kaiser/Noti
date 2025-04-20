@@ -2,12 +2,12 @@ import { FC, useEffect, useRef, useState } from 'react';
 import { Transition } from 'react-transition-group';
 import classNames from 'classnames';
 
-import { INotificationWithId } from '../interfaces/notification.interface.ts';
-import { useNotification } from '../hooks/useNotification.ts';
+import { INotificationWithId } from '../../interfaces/notification.interface.ts';
+import { useNotification } from '../../hooks/useNotification.ts';
 
-import { DELAY_AUTO_DELETION, DURATION } from '../constants';
+import { DELAY_AUTO_DELETION, DURATION } from '../../constants';
 
-import CloseIcon from '../../../../assets/icons/notification-icons/close-notification-icon.svg';
+import CloseIcon from '../../../../../assets/icons/notification-icons/close-notification-icon.svg';
 
 import styles from './Notification.module.css';
 
@@ -71,7 +71,7 @@ export const Notification: FC<INotificationWithId> = ({
 						styles.container,
 						position && styles[position],
 						type && styles[type],
-						classNameNotification,
+						classNameNotification
 					)}
 					style={{
 						...defaultStyle,

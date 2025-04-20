@@ -3,14 +3,14 @@ import { FC, ReactElement } from 'react';
 import styles from './NotificationsWrapper.module.css';
 import classNames from 'classnames';
 import { Notification } from '../Notification/Notification.tsx';
-import { useNotification } from '../hooks/useNotification.ts';
+import { useNotification } from '../../hooks/useNotification.ts';
 
-import { PositionNotifications } from '../enums/PositionNotifications.enum.ts';
-import { TypesNotification } from '../enums/TypesNotification.enum.ts';
+import { PositionNotifications } from '../../enums/PositionNotifications.enum.ts';
+import { TypesNotification } from '../../enums/TypesNotification.enum.ts';
 
-import SuccessfulIcon from '../../../../assets/icons/notification-icons/successful-notification-icon.svg';
-import InfoIcon from '../../../../assets/icons/notification-icons/info-notification-icon.svg';
-import ErrorIcon from '../../../../assets/icons/notification-icons/error-notification-icon.svg';
+import SuccessfulIcon from '../../../../../assets/icons/notification-icons/successful-notification-icon.svg';
+import InfoIcon from '../../../../../assets/icons/notification-icons/info-notification-icon.svg';
+import ErrorIcon from '../../../../../assets/icons/notification-icons/error-notification-icon.svg';
 
 interface INotificationsWrapper {
 	position?: PositionNotifications;
