@@ -71,7 +71,7 @@ export const Notification: FC<INotificationWithId> = ({
 						styles.container,
 						position && styles[position],
 						type && styles[type],
-						classNameNotification
+						classNameNotification,
 					)}
 					style={{
 						...defaultStyle,
