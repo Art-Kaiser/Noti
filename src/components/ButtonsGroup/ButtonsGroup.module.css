@@ -1,0 +1,96 @@
+.buttonGroup {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	align-items: center;
+	height: 90vh;
+
+	button {
+		cursor: pointer;
+		outline: none;
+		background-color: #456de7;
+		color: white;
+		padding: 0 20px;
+		border: 1px solid #adadad;
+	}
+
+	button:hover {
+		background-color: #3662e7;
+	}
+
+	button:active {
+		background-color: #527bf1;
+	}
+
+	.messageButton {
+		width: 50%;
+		height: 330px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.messageButton button {
+		height: 20%;
+		cursor: pointer;
+	}
+
+	.buttonsPosition {
+		position: relative;
+
+		.sides {
+			width: 280px;
+			height: 280px;
+			border-radius: 50%;
+		}
+
+		.sides button {
+			width: 140px;
+			height: 140px;
+			border: 1px solid white;
+		}
+
+		.sides button:first-child {
+			border-top-left-radius: 100%;
+			font-size: 12px;
+		}
+
+		.sides button:nth-child(2) {
+			border-top-right-radius: 100%;
+		}
+
+		.sides button:nth-child(3) {
+			border-bottom-left-radius: 100%;
+		}
+
+		.sides button:last-child {
+			border-bottom-right-radius: 100%;
+		}
+
+		.centerPosition {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			width: 130px;
+			height: 130px;
+			border-radius: 50%;
+			top: 27%;
+			left: 27%;
+		}
+
+		.centerPosition button:first-child {
+			height: 100%;
+			border-radius: 65px 65px 0 0;
+			border: 1px solid white;
+		}
+
+		.centerPosition button:last-child {
+			height: 100%;
+			border-radius: 0 0 65px 65px;
+			border: 1px solid white;
+		}
+	}
+}
