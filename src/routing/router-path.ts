@@ -1,4 +1,5 @@
-export enum ROUTER_PATH {
-	MAIN = '/',
-	ABOUT = 'about',
-}
+/** Пути. */
+export const ROUTER_PATH = {
+	MAIN: '/',
+	ABOUT: 'about',
+};

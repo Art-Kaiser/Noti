@@ -1,7 +1,11 @@
-import { TypesNotification, useNotification } from '../common/Notifications';
+import { TypesNotifications, useNotification } from '../common/Notifications';
 
 import MOCK_TEXT from '../../localization/mock-text.json';
 
+/**
+ * Компонент тестового списка.
+ * @returns {JSX.Element}
+ * */
 const ListComponent = () => {
 	return (
 		<div>
@@ -16,6 +20,10 @@ const ListComponent = () => {
 	);
 };
 
+/**
+ * Компонент группы кнопок для вызова разных нотификаций.
+ * @returns {JSX.Element}
+ * */
 export const ButtonsGroup = () => {
 	const { add, removeAll } = useNotification();
 
@@ -32,7 +40,7 @@ export const ButtonsGroup = () => {
 			title: 'информационное',
 			onClick: () =>
 				add({
-					type: TypesNotification.info,
+					type: TypesNotifications.info,
 					title: MOCK_TEXT.infoTitle,
 					text: MOCK_TEXT.infoMessage,
 				}),
@@ -41,12 +49,12 @@ export const ButtonsGroup = () => {
 			title: 'информационное с доп. уведомлением',
 			onClick: () => {
 				add({
-					type: TypesNotification.successful,
+					type: TypesNotifications.successful,
 					title: MOCK_TEXT.successfulTitle,
 					text: MOCK_TEXT.successfulMessage,
 				});
 				add({
-					type: TypesNotification.info,
+					type: TypesNotifications.info,
 					title: MOCK_TEXT.infoTitle,
 					autoDeletion: false,
 					content: <ListComponent />,
@@ -57,13 +65,13 @@ export const ButtonsGroup = () => {
 			title: 'информационное с доп. уведомлением + авто удаление',
 			onClick: () => {
 				add({
-					type: TypesNotification.successful,
+					type: TypesNotifications.successful,
 					title: MOCK_TEXT.successfulTitle,
 					text: MOCK_TEXT.successfulMessage,
 				});
 
 				add({
-					type: TypesNotification.info,
+					type: TypesNotifications.info,
 					title: MOCK_TEXT.infoTitle,
 					text: MOCK_TEXT.infoMessage,
 				});
@@ -73,7 +81,7 @@ export const ButtonsGroup = () => {
 			title: 'успешное',
 			onClick: () =>
 				add({
-					type: TypesNotification.successful,
+					type: TypesNotifications.successful,
 					title: MOCK_TEXT.successfulTitle,
 					text: MOCK_TEXT.successfulMessage,
 				}),
@@ -82,7 +90,7 @@ export const ButtonsGroup = () => {
 			title: 'быстрое с маленькой задержкой',
 			onClick: () =>
 				add({
-					type: TypesNotification.successful,
+					type: TypesNotifications.successful,
 					title: MOCK_TEXT.successfulTitle,
 					text: MOCK_TEXT.successfulMessage,
 					delay: 500,
@@ -92,7 +100,7 @@ export const ButtonsGroup = () => {
 			title: 'ошибка',
 			onClick: () =>
 				add({
-					type: TypesNotification.error,
+					type: TypesNotifications.error,
 					title: MOCK_TEXT.errorTitle,
 					text: MOCK_TEXT.errorMessage,
 				}),
@@ -101,7 +109,7 @@ export const ButtonsGroup = () => {
 			title: 'ошибка с длинным текстом',
 			onClick: () =>
 				add({
-					type: TypesNotification.error,
+					type: TypesNotifications.error,
 					title: MOCK_TEXT.errorTitle,
 					text: MOCK_TEXT.longText,
 				}),

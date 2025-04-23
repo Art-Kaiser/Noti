@@ -8,9 +8,8 @@ import { NUMBER_OF_DELETED, QUANTITY_DISPLAYED } from '../constants';
 
 /**
  * Интерфейс настроек для хука работы с уведомлениями.
- * @param {number | undefined} quantityDisplayed - Отображаемое количество.
- * @param {number | undefined} numberOfDeletedItems - Количество удаляемых элементов.
- * @returns {INotificationContext} Методы изменения списка уведомлений.
+ * @property {number | undefined} quantityDisplayed - Отображаемое количество.
+ * @property {number | undefined} numberOfDeletedItems - Количество удаляемых элементов.
  * */
 interface INotificationController {
 	quantityDisplayed?: number;

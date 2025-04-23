@@ -11,6 +11,11 @@ import CloseIcon from '../../../../../assets/icons/notification-icons/close-noti
 
 import styles from './Notification.module.css';
 
+/**
+ * Компонент уведомления.
+ * @param {INotificationWithId} props - Пропсы компонента.
+ * @returns {JSX.Element}
+ * */
 export const Notification: FC<INotificationWithId> = ({
 	id,
 	type,
@@ -29,11 +34,13 @@ export const Notification: FC<INotificationWithId> = ({
 
 	const nodeRef = useRef(null);
 
+	/** Стили по умолчанию. */
 	const defaultStyle = {
 		transition: `opacity ${DURATION}ms ease`,
 		opacity: 1,
 	};
 
+	/** Переходные стили. */
 	const transitionStyles = {
 		entering: { opacity: 1 },
 		entered: { opacity: 1 },
@@ -42,10 +49,15 @@ export const Notification: FC<INotificationWithId> = ({
 		unmounted: {},
 	};
 
+	/**
+	 * Функция срабатывающая при завершении анимации.
+	 * @returns {Void}
+	 * */
 	const onExited = (): void => {
 		remove(id);
 	};
 
+	/** Удаление уведомления по истечению времени. */
 	useEffect(() => {
 		if (!autoDeletion) return;
 
