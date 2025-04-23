@@ -1,6 +1,7 @@
 {
 	"name": "notifications",
 	"private": true,
+	"homepage": "https://art-kaiser.github.io/Noti/",
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
